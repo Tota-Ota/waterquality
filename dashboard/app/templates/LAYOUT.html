@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'commonClasses.css' %}" rel="stylesheet">
+        <link href="{% static 'global.css' %}" rel="stylesheet">
+        <link href="{% static 'inter/inter.css' %}" rel="stylesheet">
+        {% block additionalCSS %}{% endblock %}
+    </head>
+    <body>
+
+        <header>
+        </header>
+
+        {% block body %}
+        {% endblock %}
+
+        <footer>
+        </footer>
+
+    </body>
+
+    {% block additionalJS %}{% endblock %}
+</html>
