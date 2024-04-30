@@ -1,3 +1,8 @@
-/dashboard/core/__pycache__
-/dashboard/app/__pycache__
-/dashboard/app/migrations
+/server-1/core/__pycache__
+/server-2/core/__pycache__
+
+/server-1/app/__pycache__
+/server-2/app/__pycache__
+
+/server-1/app/migrations
+/server-2/app/migrations

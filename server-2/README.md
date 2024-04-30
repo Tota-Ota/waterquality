@@ -1,10 +1,9 @@
-# waterquality / Dashboard
+# waterquality / server-2
 
-This a Django Webapp, for fetching data & Data Presentation
+This a Django Webapp, for performing following tasks in the given order:
 
-### Let's get started!
-
-- **Step 0**: Install Python3. Set `python` and `pip` as environment variable 
+1. Fetch Processed data from MongoDB Container.
+2. Display the data on Dashboard.
 
 - **Step 1**: From CMD/Terminal, Navigate to `path/to/waterquality/dashboard`. Install Dependencies 
 

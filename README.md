@@ -1,12 +1,17 @@
 # waterquality
 Machine Learning & Cloud Powered Water Quality Detection System
 
-![Flow Diagram for the Project](./docs/flow.svg)
+![Flow Diagram for the Project](./docs/flow.png)
 
-_fig: Flow Diagram for the Project_
+<div align='center'>
+    <i>
+        fig: Flow Diagram for the Project
+    </i>
+</div>
 
 ### Componenets
-- [Dashboard](./dashboard)
-- Database
-- ML Model
-- Hardware
+- [Server 1](./server-1)
+- [Server 2](./server-2)
+- Database (MongoDB)
+- ML Model 
+- [Hardware](./hardware)
