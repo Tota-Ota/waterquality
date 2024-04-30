@@ -3,6 +3,7 @@ version: "3"
 services: 
 
   server-1:
+    container_name: server-1
     build: ./server-1
     ports:
       - 8001:8001
@@ -13,6 +14,7 @@ services:
     restart: always
 
   server-2:
+    container_name: server-2
     build: ./server-2
     ports:
       - 8002:8002
@@ -23,6 +25,7 @@ services:
     restart: always
 
   mongo:
+    container_name: mongo
     image: mongo:latest
     ports:
       - 80:27017
@@ -32,6 +35,7 @@ services:
 
 networks:
   minor-project:
+    name: minor-project
     ipam:
       driver: default
       config:
