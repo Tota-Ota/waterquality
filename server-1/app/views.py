@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.http import QueryDict
 
 from rest_framework import status
@@ -22,7 +23,13 @@ def hw(request):
 
     # print( request.data['name'] )
 
+    """
+    INSERT ML MODEL FEEDFORWARD NETWORK HERE 
+    THEN INSERT THE FINAL COMPUTED VALUES BELOW 
+    """
+
     save({
+        "timestamp" : datetime.now(),
         "raw-data" : data,
         "processed": {
             "value1" : 1,

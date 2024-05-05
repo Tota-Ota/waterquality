@@ -8,3 +8,5 @@
 /server-2/app/migrations
 
 /.vscode/
+
+/db/
