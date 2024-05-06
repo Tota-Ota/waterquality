@@ -6,3 +6,7 @@
 
 /server-1/app/migrations
 /server-2/app/migrations
+
+/.vscode/
+
+/db/

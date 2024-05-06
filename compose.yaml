@@ -31,6 +31,8 @@ services:
       - 80:27017
     networks:
       - minor-project
+    volumes:
+      - ./db/:/data/db/
 
 
 networks:
