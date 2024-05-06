@@ -9,12 +9,16 @@ from rest_framework.response import Response
 def hw(request):
     print('REQUEST RECEIVED')
 
-    data = dict(QueryDict(request.body))
-    print( data )
-    print( 'pH:\t\t' , data['pH'] )
-    print( 'Turbidity:\t' , data['Turbidity'] )
-    print( 'Temperature:\t' , data['Temperature'] )
+    raw_data = dict(QueryDict(request.body))
 
-    # print( request.data['name'] )
+    for key in raw_data:
 
-    return Response( request.data, status=status.HTTP_201_CREATED )
+        if ( type( raw_data[key] == list) ):
+            raw_data[key] = raw_data[key][0]
+
+        if ( type( raw_data[key] == str) ):
+            raw_data[key] = float( raw_data[key] )
+
+    print( raw_data )
+
+    return Response( raw_data, status=status.HTTP_201_CREATED )
