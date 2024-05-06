@@ -11,17 +11,17 @@ from .mongo_interface import save
 @api_view(['POST'])    
 def hw(request):
     print('REQUEST RECEIVED')
+    
+    raw_data = dict(QueryDict(request.body))
+    
+    for key in raw_data:
+        if ( type( raw_data[key] == list) ):
+            raw_data[key] = raw_data[key][0]
 
-    # data = dict(QueryDict(request.body))
-    data = request.data
+        if ( type( raw_data[key] == str) ):
+            raw_data[key] = float( raw_data[key] )
 
-    print( data )
-
-    # print( 'pH:\t\t' , data['pH'] )
-    # print( 'Turbidity:\t' , data['Turbidity'] )
-    # print( 'Temperature:\t' , data['Temperature'] )
-
-    # print( request.data['name'] )
+    print( raw_data )
 
     """
     INSERT ML MODEL FEEDFORWARD NETWORK HERE 
@@ -30,7 +30,7 @@ def hw(request):
 
     save({
         "timestamp" : datetime.now(),
-        "raw-data" : data,
+        "raw-data" : raw_data,
         "processed": {
             "value1" : 1,
             "value2" : 2,
@@ -39,4 +39,4 @@ def hw(request):
         }
     })
 
-    return Response( request.data, status=status.HTTP_201_CREATED )
+    return Response( raw_data, status=status.HTTP_201_CREATED )
