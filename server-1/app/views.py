@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from .mongo_interface import save
-
+from .ml_model import Predict
 
 @api_view(['POST'])    
 def hw(request):
@@ -21,12 +21,7 @@ def hw(request):
         if ( type( raw_data[key] == str) ):
             raw_data[key] = float( raw_data[key] )
 
-    # print( raw_data )
-
-    """
-    INSERT ML MODEL FEEDFORWARD NETWORK HERE 
-    THEN INSERT THE FINAL COMPUTED VALUES BELOW 
-    """
+    Predict( raw_data['ph'] , raw_data['Turbidity'] )
 
     save({
         "timestamp" : datetime.now(),
