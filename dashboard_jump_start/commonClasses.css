@@ -31,15 +31,11 @@ a {
 
 .aie {align-items: end;}
 
-.aib {align-items: baseline;}
-
 .mono {font-family: 'JetBrains Mono', monospace;}
 
 .mono * {font-family: 'JetBrains Mono', monospace;}
 
 .bold {font-weight: 600;}
-
-.gap-3px{gap: 3px;}
 
 .gap-5px{gap: 5px;}
 
@@ -74,5 +70,3 @@ a {
 .w-100p{width: 100%;}
 
 .h-100p{height: 100%;}
-
-.no-gap{ gap: 0px !important;}

@@ -1,0 +1,41 @@
+/* inter-thin-latin */
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 100;
+	src: local("Inter Thin"), local("Inter-Thin"), url(inter-thin-latin.woff2) format("woff2"), url(inter-thin-latin.woff) format("woff");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+/* inter-light-latin */
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 300;
+	src: local("Inter Light"), local("Inter-Light"), url(inter-light-latin.woff2) format("woff2"), url(inter-light-latin.woff) format("woff");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+/* inter-semibold-latin */
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Inter SemiBold"), local("Inter-SemiBold"), url(inter-semibold-latin.woff2) format("woff2"), url(inter-semibold-latin.woff) format("woff");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+/* inter-bold-latin */
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Inter Bold"), local("Inter-Bold"), url(inter-bold-latin.woff2) format("woff2"), url(inter-bold-latin.woff) format("woff");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+/* inter-medium-latin */
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	src: local("Inter Medium"), local("Inter-Medium"), url(inter-medium-latin.woff2) format("woff2"), url(inter-medium-latin.woff) format("woff");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+}
+

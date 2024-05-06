@@ -1,9 +1,3 @@
-h1 {
-    box-sizing: border-box;
-    display: block;
-    padding-inline: 0.25ch;
-}
-
 .mainContentContainer {
     gap: var(--w-side);
 }
@@ -26,19 +20,8 @@ h1 {
     gap: calc(var(--w-side) / 2 );
 } 
 
-.card[data-alert=true] {
-    border: 1px solid var(--color-alert-1);
-    background-color: var(--color-alert-2);
-
-}
-
 .grid .value {
     font-size: 2rem;
-    font-weight: var(--fw-bold);
-}
-
-.card .timestamp {
-    font-size: 1.45rem;
     font-weight: var(--fw-bold);
 }
 
@@ -52,42 +35,19 @@ h1 {
     color: var(--color-text-2);
 }
 
-.card.top-card .safe-limit {
-    border-top: 1px solid var(--color-border);
-    padding-top: calc(var(--w-side) / 2 );
-    box-sizing: border-box;
-}
-.card.top-card[data-alert=true] .safe-limit {
-    border-top: 1px solid var(--color-alert-1);
-}
-
-.card.timebox{
-    position: relative;
-}
-
-.card.timebox::after{
-    content: '';
-    width: calc(100% - 2 * var(--w-side));
-    border-top: 1px solid var(--color-border);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 /* Barplot */
 
 
-/* .Barplot {
-    grid-template-columns: 3ch auto;
-} */
+.Barplot {
+    grid-template-columns: 11ch auto;
+}
 
-.Barplot .grid9x1 {
-    grid-template-columns: repeat(9, 1fr);
+.Barplot .grid6x1 {
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .Barplot .bar-track {
-    height: 25rem;
+    height: 20rem;
 }
 
 .Barplot > .plot{
@@ -96,7 +56,7 @@ h1 {
 
 .Barplot .bar {
     /* height: 50%; */
-    width: min(6rem, calc(100% - 10px));
+    width: min(4rem, calc(100% - 10px));
     background-color: var(--color-accent-1);
     border-top-right-radius: 0.35rem;
     border-top-left-radius: 0.35rem;
@@ -119,7 +79,7 @@ h1 {
 }
 
 .Barplot .legend-text {
-    font-size: .85rem;
+    font-size: .75rem;
     color: var(--color-text-2);
     font-weight: var(--fw-regular);
 }
@@ -127,14 +87,9 @@ h1 {
 .Barplot .legend .legend-text {
     text-align: center;
     margin-top: .3rem;
-    border-left: 1px solid var(--color-border);
 }
 
-.Barplot .legend .legend-text:first-child{
-    border-left: none;
-}
-
-/* .Barplot .side .legend-text, */
+.Barplot .side .legend-text,
 .safe-line {
     width: 100%;
     top: 50%;
@@ -146,11 +101,11 @@ h1 {
     opacity: .5;
 }
 
-/* .Barplot .side .legend-text {
-    text-align: left;
+.Barplot .side .legend-text {
+    text-align: right;
     padding-inline-end: 1ch;
     box-sizing: border-box;
-} */
+}
 
 .safe-line {
     border-top: 2px dashed var(--color-text-2);
@@ -185,16 +140,11 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-.Barplot .bar .popup h3 .now_value{
+.Barplot .bar .popup h3 .now_value {
     font-size: 1.5rem;
     font-weight: var(--fw-bold);
 }
-
-.Barplot .bar .popup .unit{
-    font-size: 1rem;
-    font-weight: var(--fw-bold);
-}
-
+.Barplot .bar .popup .unit,
 .Barplot .bar .popup .safe-limit,
 .Barplot .bar .popup .safe-limit * {
     font-size: 0.875rem;

@@ -3,7 +3,7 @@
     --color-accent-2: hsl(217, 44%, 18%);
 
     --color-alert-1: hsl(347, 77%, 50%);
-    --color-alert-2: hsl(347, 10%, 10%);
+    --color-alert-2: hsl(24, 10%, 10%);
 
     --color-text-1: hsl(0, 0%, 95%);
     --color-text-2: hsl(217, 5%, 65%);
@@ -19,7 +19,7 @@
     --fw-bold: 700;
 
     --w-side: 20px;
-    --w-content: min( calc(100vw - 2 * var(--w-side) ), 130ch);
+    --w-content: min( calc(100vw - 2 * var(--w-side) ), 120ch);
 }
 
 * {

@@ -10,7 +10,7 @@ from .mongo_interface import save
 
 @api_view(['POST'])    
 def hw(request):
-    print('REQUEST RECEIVED')
+    # print('REQUEST RECEIVED')
     
     raw_data = dict(QueryDict(request.body))
     
@@ -21,7 +21,7 @@ def hw(request):
         if ( type( raw_data[key] == str) ):
             raw_data[key] = float( raw_data[key] )
 
-    print( raw_data )
+    # print( raw_data )
 
     """
     INSERT ML MODEL FEEDFORWARD NETWORK HERE 
@@ -32,10 +32,15 @@ def hw(request):
         "timestamp" : datetime.now(),
         "raw-data" : raw_data,
         "processed": {
-            "value1" : 1,
-            "value2" : 2,
-            "value3" : 3,
-            "value4" : 4
+            "Hardness": 0,
+            "Solids": 0,
+            "Chloramines": 0,
+            "Sulfate": 0,
+            "Conductivity": 0,
+            "Organic_carbon": 0,
+            "Trihalomethanes": 0,
+            "Turbidity": 0,
+            "Potability" : 0
         }
     })
 

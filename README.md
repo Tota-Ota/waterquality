@@ -39,5 +39,5 @@ Machine Learning & Cloud Powered Water Quality Detection System
 #### Debug Request on Server-1 & Server-2
 
 ``` bash
-docker-compose up --build --no-attach mongo 
+docker compose up --build --no-attach mongo 
 ```
