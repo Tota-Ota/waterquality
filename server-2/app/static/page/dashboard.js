@@ -18,19 +18,19 @@ const predicted_parameters = [
 
 const parameter_data_sheet = {
 
-    "pH"                    : [10, ""],
-    "Turbidity"             : [1, "NTU"],
-    "Temperature"           : [100, "°C"],
+    "pH"                    : [10   , ""    ],
+    "Turbidity"             : [1    , "NTU" ],
+    "Temperature"           : [100  , "°C"  ],
 
-    "Hardness"              : [7, "unit"],
-    "Solids"                : [7, "unit"],
-    "Chloramines"           : [7, "unit"],
-    "Sulfate"               : [7, "unit"],
-    "Conductivity"          : [7, "unit"],
-    "Organic_carbon"        : [7, "unit"],
-    "Trihalomethanes"       : [7, "unit"],
-    "Turbidity"             : [7, "unit"],
-    "Potability"            : [7, "unit"],
+    "Hardness"              : [7    , "mg/L"],
+    "Solids"                : [7    , "ppm" ],
+    "Chloramines"           : [7    , "ppm" ],
+    "Sulfate"               : [7    , "mg/L"],
+    "Conductivity"          : [7    , "S/cm"],
+    "Organic_carbon"        : [7    , "ppm" ],
+    "Trihalomethanes"       : [7    , "g/L" ],
+    "Turbidity"             : [7    , "NTU" ],
+    "Potability"            : [0    , ""    ],
 
 }
 

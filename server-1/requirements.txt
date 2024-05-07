@@ -2,3 +2,6 @@ Django==5.0
 django-cors-headers==4.3.1
 djangorestframework==3.14.0
 pymongo==4.6.1
+
+pandas==2.2.0
+sklearn==1.4.2

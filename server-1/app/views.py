@@ -21,21 +21,21 @@ def hw(request):
         if ( type( raw_data[key] == str) ):
             raw_data[key] = float( raw_data[key] )
 
-    Predict( raw_data['ph'] , raw_data['Turbidity'] )
+    _pre = Predict( raw_data['ph'] , raw_data['Turbidity'] )
 
     save({
         "timestamp" : datetime.now(),
         "raw-data" : raw_data,
         "processed": {
-            "Hardness": 0,
-            "Solids": 0,
-            "Chloramines": 0,
-            "Sulfate": 0,
-            "Conductivity": 0,
-            "Organic_carbon": 0,
-            "Trihalomethanes": 0,
-            "Turbidity": 0,
-            "Potability" : 0
+            "Hardness"          : _pre[0],
+            "Solids"            : _pre[1],
+            "Chloramines"       : _pre[2],
+            "Sulfate"           : _pre[3],
+            "Conductivity"      : _pre[4],
+            "Organic_carbon"    : _pre[5],
+            "Trihalomethanes"   : _pre[6],
+            "Turbidity"         : _pre[7],
+            "Potability"        : _pre[8]
         }
     })
 
