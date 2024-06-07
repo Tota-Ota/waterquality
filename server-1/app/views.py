@@ -10,6 +10,7 @@ from .ml_model import Predict
 
 @api_view(['POST'])    
 def hw(request):
+
     # print('REQUEST RECEIVED')
     
     raw_data = dict(QueryDict(request.body))
@@ -21,9 +22,14 @@ def hw(request):
         if ( type( raw_data[key] == str) ):
             raw_data[key] = float( raw_data[key] )
 
-    _pre = Predict( raw_data['ph'] , raw_data['Turbidity'] )
+    
+    # print(raw_data)
 
-    save({
+    _pre = Predict( raw_data['pH'] , raw_data['Turbidity'] )
+
+    # print(_pre)
+
+    save_data = {
         "timestamp" : datetime.now(),
         "raw-data" : raw_data,
         "processed": {
@@ -34,9 +40,10 @@ def hw(request):
             "Conductivity"      : _pre[4],
             "Organic_carbon"    : _pre[5],
             "Trihalomethanes"   : _pre[6],
-            "Turbidity"         : _pre[7],
-            "Potability"        : _pre[8]
+            "Potability"        : _pre[7],
         }
-    })
+    }
+
+    save(save_data)
 
     return Response( raw_data, status=status.HTTP_201_CREATED )
