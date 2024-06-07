@@ -1,7 +1,15 @@
-version: "3"
-
 services: 
-
+  server-1:
+    container_name: server-1
+    build: ./server-1
+    ports:
+      - 8001:8001
+    networks:
+      - minor-project
+    depends_on:
+      - mongo
+    restart: always
+    
   server-2:
     container_name: server-2
     build: ./server-2
@@ -20,6 +28,7 @@ services:
       - 80:27017
     networks:
       - minor-project
+    restart: always
     volumes:
       - ./db/:/data/db/
 

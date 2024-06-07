@@ -12,25 +12,23 @@ const predicted_parameters = [
     "Conductivity",
     "Organic_carbon",
     "Trihalomethanes",
-    "Turbidity",
     "Potability",
 ]
 
 const parameter_data_sheet = {
 
-    "pH"                    : [10, ""],
-    "Turbidity"             : [1, "NTU"],
-    "Temperature"           : [100, "°C"],
+    "pH"                    : [8.5    , ""    ],
+    "Turbidity"             : [5      , "NTU" ],
+    "Temperature"           : [100    , "°C"  ],
 
-    "Hardness"              : [7, "unit"],
-    "Solids"                : [7, "unit"],
-    "Chloramines"           : [7, "unit"],
-    "Sulfate"               : [7, "unit"],
-    "Conductivity"          : [7, "unit"],
-    "Organic_carbon"        : [7, "unit"],
-    "Trihalomethanes"       : [7, "unit"],
-    "Turbidity"             : [7, "unit"],
-    "Potability"            : [7, "unit"],
+    "Hardness"              : [120    , "mg/L"],
+    "Solids"                : [1000   , "ppm" ],
+    "Chloramines"           : [4      , "ppm" ],
+    "Sulfate"               : [250    , "mg/L"],
+    "Conductivity"          : [1000   , "S/cm"],
+    "Organic_carbon"        : [2      , "ppm" ],
+    "Trihalomethanes"       : [0.08   , "g/L" ],
+    "Potability"            : [0.7    , ""    ],
 
 }
 
@@ -41,6 +39,8 @@ function dataRefresh() {
         .then(fetched_data => {
 
             // timestamp
+
+
 
             timestamp = fetched_data.timestamp
 
@@ -56,6 +56,8 @@ function dataRefresh() {
                 document.querySelector(`#${parameter}`).textContent = value
 
                 card = document.querySelector(`.card:has(#${parameter})`)
+
+                // card.setAttribute("data-alert", false)
 
                 if ( value >= parameter_data_sheet[parameter][0] ) {
                     card.setAttribute("data-alert", true)
@@ -73,11 +75,19 @@ function dataRefresh() {
 
             predicted_parameters.forEach(parameter => {
 
+                console.log('hello1')
+
                 const value = fetched_data['processed'][parameter]
+
+                console.log(value)
 
                 const bar = document.querySelector(`#${parameter} .bar`)
 
+                console.log(bar)
+
                 bar.setAttribute("style", `height: ${value * 50 / parameter_data_sheet[parameter][0]}%;`)
+
+                console.log( value * 50 / parameter_data_sheet[parameter][0] )
 
                 if ( value >= parameter_data_sheet[parameter][0] ) {
                     bar.setAttribute("data-alert", true)
@@ -85,11 +95,19 @@ function dataRefresh() {
                     bar.setAttribute("data-alert", false)
                 }
 
+                console.log('h1')
+
                 bar.querySelector(".now_value").textContent = value
+
+                console.log('h2')
 
                 bar.querySelector(".limit").textContent = `${parameter_data_sheet[parameter][0]} ${parameter_data_sheet[parameter][1]}`
 
+                console.log('h3')
+
                 bar.querySelector(".unit").textContent = parameter_data_sheet[parameter][1]
+
+                console.log('h4')
 
             })
 
@@ -111,4 +129,4 @@ function dataRefresh() {
 
 dataRefresh()
 
-// setInterval(dataRefresh, 2000);
+setInterval(dataRefresh, 2000);

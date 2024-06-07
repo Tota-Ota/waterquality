@@ -1,4 +1,4 @@
-FROM python:alpine3.19
+FROM python:3.12-bookworm
 
 COPY . /opt/
 
@@ -6,6 +6,8 @@ WORKDIR /opt/
 
 RUN pip install -r requirements.txt
 
+ENV DATA_CSV='/opt/data_cleaned.csv'
+
 EXPOSE 8001
 
-ENTRYPOINT [ "python3", "manage.py", "runserver", "0.0.0.0:8001" ] 
+CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8001" ] 

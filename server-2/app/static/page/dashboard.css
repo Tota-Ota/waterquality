@@ -82,8 +82,8 @@ h1 {
     grid-template-columns: 3ch auto;
 } */
 
-.Barplot .grid9x1 {
-    grid-template-columns: repeat(9, 1fr);
+.Barplot .grid7x1 {
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .Barplot .bar-track {
