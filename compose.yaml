@@ -1,7 +1,4 @@
-version: "3"
-
 services: 
-
   server-1:
     container_name: server-1
     build: ./server-1
@@ -12,7 +9,7 @@ services:
     depends_on:
       - mongo
     restart: always
-
+    
   server-2:
     container_name: server-2
     build: ./server-2
