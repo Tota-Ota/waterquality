@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"73200d9602355400","type":"group","x":-245,"y":-240,"width":1020,"height":400,"color":"#007bff","label":"Docker Compose (Deployed on Single Node)"},
+		{"id":"08d9baa787e19da9","type":"group","x":-115,"y":-173,"width":200,"height":306,"label":"Container 1"},
+		{"id":"be94e80265212067","type":"group","x":165,"y":-173,"width":200,"height":306,"label":"Container 2"},
+		{"id":"bd4362f4531d101d","type":"group","x":445,"y":-173,"width":200,"height":306,"label":"Container 3"},
+		{"id":"2501c144adf31cc0","type":"text","text":"MongoDB","x":190,"y":-48,"width":150,"height":57,"color":"4"},
+		{"id":"f2e388796d13b2b6","type":"text","text":"Mongo\nInterface","x":469,"y":-153,"width":152,"height":65,"color":"4"},
+		{"id":"2da443999f685b32","type":"text","text":"Server 2","x":469,"y":56,"width":152,"height":50,"color":"4"},
+		{"id":"14bc6392b710376b","type":"text","text":"Server 1 ","x":-91,"y":-153,"width":152,"height":50,"color":"4"},
+		{"id":"df62bb3016e028c9","type":"text","text":"8002","x":720,"y":56,"width":110,"height":50,"color":"4"},
+		{"id":"1a97d940a0649e3d","type":"text","text":"8001","x":-300,"y":-153,"width":110,"height":50,"color":"4"},
+		{"id":"c04036bcc07baad7","type":"text","text":"Hardware\n","x":-500,"y":51,"width":160,"height":60,"color":"6"},
+		{"id":"25dea30611de595e","type":"text","text":"Dashboard","x":860,"y":-150,"width":160,"height":60,"color":"6"},
+		{"id":"f5d34984e9c857ab","type":"text","text":"ML for Post Processing","x":-92,"y":-50,"width":155,"height":61},
+		{"id":"2d5760dd48d0eaf8","type":"text","text":"Mongo\nInterface","x":-91,"y":48,"width":152,"height":65,"color":"4"},
+		{"id":"6fb881aa24422200","type":"text","text":"Persistent Storage","x":162,"y":200,"width":207,"height":50,"color":"4"},
+		{"id":"d3a20f36b7bc8310","type":"text","text":"ML\n","x":463,"y":558,"width":250,"height":60},
+		{"id":"8df34e2086fce7e0","x":-520,"y":558,"width":250,"height":60,"type":"text","text":"Train\n"},
+		{"id":"e51198fed040c317","type":"text","text":"weights\n","x":61,"y":558,"width":250,"height":60},
+		{"id":"7f7dbf15098a844f","x":311,"y":340,"width":250,"height":60,"type":"text","text":"testing i/p\n"},
+		{"id":"d3c93f0a51092cca","type":"text","text":"incident  i/p\n","x":621,"y":340,"width":250,"height":60},
+		{"id":"287aaa527edcfe5a","x":463,"y":760,"width":250,"height":60,"type":"text","text":"o/p"}
+	],
+	"edges":[
+		{"id":"f4b7540bab12bc3d","fromNode":"2d5760dd48d0eaf8","fromSide":"right","toNode":"2501c144adf31cc0","toSide":"left"},
+		{"id":"bccb5fbcf3106e63","fromNode":"2501c144adf31cc0","fromSide":"right","toNode":"f2e388796d13b2b6","toSide":"left"},
+		{"id":"8e7c08f77149eafa","fromNode":"f2e388796d13b2b6","fromSide":"bottom","toNode":"2da443999f685b32","toSide":"top"},
+		{"id":"190aa91bbf4c03d0","fromNode":"df62bb3016e028c9","fromSide":"right","toNode":"25dea30611de595e","toSide":"bottom"},
+		{"id":"b3ab1879361445ea","fromNode":"1a97d940a0649e3d","fromSide":"right","toNode":"14bc6392b710376b","toSide":"left"},
+		{"id":"384418430c1effa5","fromNode":"2da443999f685b32","fromSide":"right","toNode":"df62bb3016e028c9","toSide":"left"},
+		{"id":"49a8c5e2d3faa893","fromNode":"c04036bcc07baad7","fromSide":"top","toNode":"1a97d940a0649e3d","toSide":"left"},
+		{"id":"9f5ea58b215dea8c","fromNode":"f5d34984e9c857ab","fromSide":"bottom","toNode":"2d5760dd48d0eaf8","toSide":"top"},
+		{"id":"1df744e815cabb33","fromNode":"2501c144adf31cc0","fromSide":"bottom","toNode":"6fb881aa24422200","toSide":"top","fromEnd":"arrow"},
+		{"id":"8604428aec1b5677","fromNode":"14bc6392b710376b","fromSide":"bottom","toNode":"f5d34984e9c857ab","toSide":"top"},
+		{"id":"fb5e16de8578ef5c","fromNode":"7f7dbf15098a844f","fromSide":"bottom","toNode":"d3a20f36b7bc8310","toSide":"top"},
+		{"id":"7dc060d20468fbcb","fromNode":"d3a20f36b7bc8310","fromSide":"bottom","toNode":"287aaa527edcfe5a","toSide":"top"},
+		{"id":"fbd0e8f486fa7b71","fromNode":"e51198fed040c317","fromSide":"right","toNode":"d3a20f36b7bc8310","toSide":"left"},
+		{"id":"f5765eb7d6af98b8","fromNode":"d3c93f0a51092cca","fromSide":"bottom","toNode":"d3a20f36b7bc8310","toSide":"top"}
+	]
+}
